@@ -10,7 +10,7 @@ async def main() -> None:
     llm_client = LLMClient()
 
     # 2. Prepara una pregunta para el modelo.
-    pregunta = "Explica brevemente qué es un Makefile en el contexto de DevOps."
+    pregunta = "Explica brevemente qué es Pythonic way "
 
     # 3. Envía la pregunta y espera la respuesta.
     respuesta = await llm_client.ask(pregunta)

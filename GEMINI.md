@@ -1,65 +1,48 @@
-# Gemini Project: Python LLM Application Template
+# Gemini Project: Plantilla de Aplicación Python
 
-## Project Overview
+## Resumen del Proyecto
 
-This project is a modern and robust template for Python applications. It demonstrates how to interact with a Large Language Model (LLM) using a configurable client and includes utility functions for Git. The project is structured with a clear separation of concerns, with source code in the `src` directory and tests in the `tests` directory.
+Este proyecto es una plantilla para aplicaciones de Python, estructurada con una clara separación de responsabilidades. El código fuente se encuentra en el directorio `src` y las pruebas en `tests`.
 
-A comprehensive `README.md` has been generated to serve as a guide for new developers using this template.
+Se ha generado un `README.md` completo como guía para los nuevos desarrolladores que utilicen esta plantilla.
 
-The main application (`src/app/main.py`) initializes an `LLMClient` and uses it to ask a question to the configured LLM. The `LLMClient` (`src/app/llm_client.py`) is designed to be compatible with OpenAI's API. The project also includes a Git utility function (`src/app/git_utils.py`) for cloning repositories, which can be executed from the command line via the `Makefile`.
+La aplicación principal (`src/app/main.py`) sirve como punto de entrada de ejemplo. El proyecto está diseñado para ser fácilmente adaptable, permitiendo a los desarrolladores sustituir la lógica de ejemplo por su propia funcionalidad.
 
-The project has been updated to use modern Python packaging standards, generating `wheel` (`.whl`) and `sdist` packages, and removing legacy `.egg` formats from the final build.
+## Comandos y Flujo de Trabajo
 
-## Building and Running
+Este proyecto utiliza un `Makefile` para automatizar las tareas de desarrollo.
 
-This project uses a `Makefile` to automate common development tasks.
+### Instalación
 
-### Installation
-
-To set up the development environment and install dependencies, run:
+Para configurar el entorno de desarrollo e instalar las dependencias, ejecuta:
 
 ```bash
 make install
 ```
 
-This will create a Python virtual environment in `.venv`, install the required dependencies from `pyproject.toml`, and install the project in editable mode.
+### Ejecución de la Aplicación
 
-### Running the Application
-
-To run the main application, execute:
+Para ejecutar la aplicación principal, utiliza:
 
 ```bash
-.venv/bin/python src/app/main.py
+make run
 ```
 
-### Running Tests and Quality Checks
+### Pruebas y Calidad de Código
 
-The project includes a suite of quality checks that can be run with a single command:
+Para ejecutar el linter, el verificador de tipos y las pruebas unitarias, ejecuta:
 
 ```bash
 make check
 ```
 
-This command will:
-1.  Run the `ruff` linter to check for code quality issues.
-2.  Run `mypy` to perform static type checking.
-3.  Run `pytest` to execute unit tests and generate a code coverage report.
+Consulta el `Makefile` o el `README.md` para ver una lista completa de los comandos disponibles.
 
-You can also run these checks and other commands individually. See the `Makefile` or the newly created `README.md` for a full list of commands, which includes:
-- `make activate`
-- `make lint`
-- `make type-check`
-- `make test`
-- `make format`
-- `make build`
-- `make clone REPO_URL=<url> LOCAL_PATH=<path>`
-- `make clean`
+## Convenciones de Desarrollo
 
-## Development Conventions
-
-*   **Structure:** Source code is located in `src/app`, and tests are in `tests`.
-*   **Dependencies:** Project dependencies are managed in `pyproject.toml`.
-*   **Formatting:** Code is formatted with `black` and `ruff`. You can format the code by running `make format`.
-*   **Testing:** Unit tests are written with `pytest` and `unittest.mock`.
-*   **Configuration:** The application is configured through environment variables, as detailed in `.env.example`.
-*   **Documentation:** A detailed `README.md` file is available in the project root, providing a comprehensive guide for developers.
+*   **Estructura:** Código fuente en `src/app`, pruebas in `tests`.
+*   **Dependencias:** Gestionadas en `pyproject.toml`.
+*   **Formateo:** `black` y `ruff`.
+*   **Pruebas:** `pytest`.
+*   **Configuración:** Variables de entorno desde `.env`.
+*   **Documentación:** `README.md` en la raíz del proyecto.

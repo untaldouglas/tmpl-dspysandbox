@@ -96,6 +96,10 @@ clean: ## Elimina los artefactos de compilación, cachés y el entorno virtual.
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	@echo "Limpieza completada."
 
+run: ## Ejecuta la aplicación principal (src/app/main.py).
+	@echo "Ejecutando la aplicación principal..."
+	$(VENV_PYTHON) $(SRC_DIR)/app/main.py
+
 clone: ## Clona un repositorio de Git. Uso: make clone REPO_URL=<url> LOCAL_PATH=<path>
 	@if [ -z "$(REPO_URL)" ] || [ -z "$(LOCAL_PATH)" ]; then \
 		echo "Error: REPO_URL y LOCAL_PATH son obligatorios."; \

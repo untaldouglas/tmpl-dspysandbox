@@ -56,7 +56,7 @@ El `Makefile` contiene los comandos para el flujo de trabajo:
 | :--- | :--- |
 | `make install` | Instala dependencias. |
 | `make activate`| Muestra el comando para activar el entorno. |
-| `make run` | Ejecuta la aplicación principal. |
+| `make run` | Ejecuta la aplicación principal de ejemplo. |
 | `make check` | Ejecuta `lint`, `type-check` y `test`. |
 | `make format` | Formatea el código. |
 | `make lint` | Ejecuta el linter `ruff`. |

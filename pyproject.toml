@@ -1,0 +1,35 @@
+[project]
+name = "python-project-template"
+version = "0.1.0"
+dependencies = [
+    "dspy==3.0.4",
+    # Aquí puedes añadir dependencias de producción, por ejemplo:
+    # "fastapi", 
+    # "requests",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "build",
+    "python-dotenv",
+    "GitPython",
+    "openai",
+]
+
+# --- Configuración de Herramientas ---
+
+[tool.mypy]
+# Ignora los errores de "missing imports" para las librerías que no tienen stubs de tipo.
+ignore_missing_imports = true
+# Puedes hacerlo más específico así:
+# [[tool.mypy.overrides]]
+# module = [
+#     "dspy.*",
+#     "git.*"
+# ]
+# ignore_missing_imports = true
